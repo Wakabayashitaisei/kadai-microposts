@@ -1,0 +1,13 @@
+body {
+  background-image: url('/image/5151bd8ef98b09c955e38d5db5122754.jpg');
+  /*width: 220px;*/
+  height: 220px;
+  background-size: cover;
+  color:#fff;
+}
+
+.background{
+  height: 100%;
+  background: rgba(255,255,255,0.5);
+}
+

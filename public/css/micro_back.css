@@ -1,0 +1,11 @@
+body {
+  background-image: url('untitled2.bmg');
+  /*width: 220px;*/
+  height: 220px;
+  background-size: cover;
+}
+
+.background{
+  height: 100%;
+  background: rgba(255,255,255,0.5);
+}

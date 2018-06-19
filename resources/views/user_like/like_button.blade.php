@@ -1,4 +1,3 @@
-
     @if (Auth::user()->is_liking($micropost->id))
         {!! Form::open(['route' => ['user.unlike', $micropost->id], 'method' => 'delete']) !!}
             {!! Form::submit('Unlike', ['class' => "btn btn-info btn-xs"]) !!}

@@ -1,6 +1,19 @@
+     <style type="text/css">
+            .post p1{
+                width: 500px;
+                word-wrap: break-all;
+            }
+            
+        </style>
+              
+
 <ul class="media-list">
+    <body>
+        <link href="css/micro_back.css" rel="stylesheet" type="text/css">
+    </body>
 @foreach ($microposts as $micropost)
     <?php $user = $micropost->user; ?>
+    
     <li class="media">
         <div class="media-left">
             <img class="media-object img-rounded" src="{{ Gravatar::src($user->email, 50) }}" alt="">
@@ -9,8 +22,8 @@
             <div>
                 {!! link_to_route('users.show', $user->name, ['id' => $user->id]) !!} <span class="text-muted">posted at {{ $micropost->created_at }}</span>
             </div>
-            <div>
-                <p>{!! nl2br(e($micropost->content)) !!}</p>
+            <div class="post">
+                <p1>{!! nl2br(e($micropost->content)) !!}</p1>
             </div>
             <div>
                 @if (Auth::user()->id == $micropost->user_id)
@@ -28,3 +41,4 @@
 @endforeach
 </ul>
 {!! $microposts->render() !!}
+
